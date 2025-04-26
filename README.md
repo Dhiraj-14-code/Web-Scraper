@@ -1,44 +1,83 @@
-# Web-Scraper
-A modular web scraping system using Flask, BeautifulSoup, and Selenium to extract and display real-time data from various websites. Users can select categories, scrape data efficiently, store it in MySQL, and view it through a responsive web interface built with HTML, CSS, and JavaScript.
-Here’s a clean and short **README.md** for your project:
+# Web Scraper Application
 
----
-
-# Web Scraper 
-
-A modular web scraping application built with Flask, BeautifulSoup, and Selenium. It allows users to scrape real-time data from various websites, store it in MySQL, and view it dynamically through a responsive web interface.
+A Flask-based web application for scraping websites with user authentication and scheduling capabilities.
 
 ## Features
-- Category-based data scraping
-- Real-time extraction and rendering
-- Structured storage using MySQL
-- Dynamic frontend with HTML, CSS, JavaScript
-- Error handling for different website structures
 
-## Tech Stack
-- **Frontend:** HTML, CSS, JavaScript
-- **Backend:** Flask (Python)
-- **Scraping Tools:** BeautifulSoup, Selenium
-- **Database:** MySQL
+- User authentication (local and OAuth)
+- Website scraping with multiple methods
+- Scraping history tracking
+- Scheduled scraping jobs
+- Data export functionality
+- User profile management
 
-## Setup Instructions
-1. Clone the repository.
-2. Set up a MySQL database and update your database credentials in `db.py`.
-3. Install dependencies:  
-   ```
-   pip install -r requirements.txt
-   ```
-4. Run the Flask server:  
-   ```
-   python app.py
-   ```
-5. Open your browser and navigate to `http://localhost:5000/`.
+## Prerequisites
 
-## Requirements
-- Python 3.x
-- MySQL Server
-- Required Python packages (Flask, BeautifulSoup, Selenium)
+- Python 3.8 or higher
+- pip (Python package installer)
+
+## Installation
+
+1. Clone the repository:
+```bash
+git clone <repository-url>
+cd web-scraper
+```
+
+2. Create a virtual environment (recommended):
+```bash
+python -m venv venv
+source venv/bin/activate  # On Windows: venv\Scripts\activate
+```
+
+3. Install dependencies:
+```bash
+pip install -r requirements.txt
+```
+
+4. Set up environment variables:
+```bash
+cp .env.example .env
+```
+Edit the `.env` file with your configuration values.
+
+## Running the Application
+
+1. Activate the virtual environment (if not already activated):
+```bash
+source venv/bin/activate  # On Windows: venv\Scripts\activate
+```
+
+2. Run the Flask application:
+```bash
+python app.py
+```
+
+3. Open your web browser and navigate to:
+```
+http://localhost:5000
+```
+
+## Database
+
+The application uses SQLite as its database. The database file (`scraper.db`) will be automatically created when you first run the application.
+
+## OAuth Setup
+
+To use Google and Facebook login:
+
+1. Create a project in the Google Cloud Console and get your OAuth credentials
+2. Create a Facebook App and get your App ID and Secret
+3. Add these credentials to your `.env` file
+
+## Contributing
+
+1. Fork the repository
+2. Create a feature branch
+3. Commit your changes
+4. Push to the branch
+5. Create a Pull Request
 
 ## License
-This project is for educational purposes only.
 
+This project is licensed under the MIT License - see the LICENSE file for details. 
